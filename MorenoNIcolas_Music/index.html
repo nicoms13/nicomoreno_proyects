@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<title></title>
+</head>
+<body>
+	<div class="main">
+		<div class="disco">
+			<img id="track_img" src="">
+			<div class="volume">
+				<p id="volume_show">50</p>
+
+				<i id="volume_icon" class="fas fa-volume-up"></i>
+				<input id="volume" type="range" min="0" max="100" value="50" name="">
+			</div>
+		</div>
+
+		<div class="menu">
+			<div class="show_song_no">
+				<p id="present">1</p>
+				<p>/</p>
+				<p id="total">5</p>
+			</div>
+
+			<p id="title">title.mp3</p>
+			<p id="artist">Artist name</p>
+
+			<div class="middle">
+				<button id="prev"><i class="fas fa-backward"></i></button>
+				<button id="play"><i class="fas fa-play-circle"></i></button>
+				<button id="next"><i class="fas fa-forward"></i></button>
+			</div>
+
+			<div class="duration">
+				<p id="current_time">00:00</p>
+				<input type="range" min="0" max="100" value="0" id="duration_slider" name="">
+				<p id="total_time">99:99</p>
+			</div>
+
+			<div class="btn-group">
+				<button id="backward"><i class="fas fa-step-backward"></i></button>
+				<button id="forward"><i class="fas fa-step-forward"></i></button>
+			</div>
+		</div>
+	</div>
+
+	<img id="back_img" src="">
+</body>
+<script defer src="scripts.js"></script>
+</html>
