@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+  --color-one: rgba(35, 219, 130, 0.5);
+  --color-two: rgba(35, 219, 130, 1.0);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+section {
+	padding: 10% 10%;
+}
+
+body {
+	overflow: hidden;
+}
+
+.home {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: #23DB82;
+	color: white;
+}
+
+.home:before {
+	z-index: 7;
+	content: '';
+	position: absolute;
+	background: var(--color-one);
+	transition: 1s ease;
+	transition-property: background;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.home .content {
+	z-index: 10;
+	width: 70%;
+	margin-top: 50px;
+	display: none;
+}
+
+.home .content.active {
+	display: block;
+}
+
+.home .content h1 {
+	font-size: 4em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	line-height: 75px;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.home .content span {
+	font-size: 1.2em;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	line-height: 75px;
+}
+
+.home video {
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider-navigation {
+	z-index: 8;
+	position: relative;
+	display: flex;
+	transform: translateY(80px);
+	margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s ease;
+	color: var(--color-two);
+	transition: 1s ease;
+	transition-property: color;
+	font-size: 20px;
+}
+
+.slider-navigation .nav-btn.active {
+	background: var(--color-two);
+	transition: 1s ease;
+	transition-property: background;
+	color: white;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+	margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+	transform: scale(1.2);
+}
+
+.video-slider {
+	position: absolute;
+	width: 100%;
+}
+
+.left_tran {
+	clip-path: circle(0% at 0 50%);
+}
+
+.left_tran.active {
+	clip-path: circle(0% at 0 50%);
+	clip-path: circle(150% at 0 50%);
+	transition: 2s ease;
+	transition-property: clip-path;
+}
+
+.right_tran {
+	clip-path: circle(0% at 100% 50%);
+}
+
+.right_tran.active {
+	clip-path: circle(0% at 100% 50%);
+	clip-path: circle(150% at 100% 50%);
+	transition: 2s ease;
+	transition-property: clip-path;
+}
+
+.top_tran {
+	clip-path: circle(0% at 50% 0%);
+}
+
+.top_tran.active {
+	clip-path: circle(0% at 50% 0%);
+	clip-path: circle(150% at 50% 0%);
+	transition: 2s ease;
+	transition-property: clip-path;
+}
+
+.bot_tran {
+	clip-path: circle(0% at 50% 100%);
+}
+
+.bot_tran.active {
+	clip-path: circle(0% at 50% 100%);
+	clip-path: circle(150% at 50% 100%);
+	transition: 2s ease;
+	transition-property: clip-path;
+}
+
+.mid_tran {
+	clip-path: circle(0% at 50% 50%);
+}
+
+.mid_tran.active {
+	clip-path: circle(0% at 50% 50%);
+	clip-path: circle(100% at 50% 50%);
+	transition: 2s ease;
+	transition-property: clip-path;
+}
+
+.slider-transition {
+	z-index: 8;
+	position: relative;
+	display: flex;
+	transform: translateY(80px);
+	margin-bottom: 12px;
+}
+
+.slider-transition .tran-btn {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--color-two);
+	transition: 1s ease;
+	transition-property: background;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s ease;
+	color: #fff;
+	font-size: 20px;
+}
+
+.slider-transition .tran-btn.active {
+	background: #fff;
+	color: var(--color-two);
+	transition: 1s ease;
+	transition-property: color;
+}
+
+.slider-transition .tran-btn:not(:last-child) {
+	margin-right: 20px;
+}
+
+.slider-colors .tran-btn:hover {
+	transform: scale(1.2);
+}
+
+.slider-colors {
+	z-index: 8;
+	position: relative;
+	display: flex;
+	transform: translateY(80px);
+	margin-bottom: 12px;
+}
+
+.slider-colors .color-btn {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+.slider-colors .color-btn.active {
+	background: #23DB82;
+	color: white;
+}
+
+.slider-colors .color-btn:not(:last-child) {
+	margin-right: 20px;
+}
+
+.slider-colors .color-btn:hover {
+	transform: scale(1.2);
+}
+
+#color-one {
+	background: #23DB82;
+}
+
+#color-two {
+	background: #DB23CD;
+}
+
+#color-thr {
+	background: #8523DB;
+}
+
+#color-fou {
+	background: #2395DB;
+}
+
+#color-fiv {
+	background: #87DB23;
+}
+
